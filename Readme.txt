@@ -14,3 +14,14 @@ Recognition
 - For each label detected in detection part, I extracted edges using canny edge detector. Then I compared features of the label and all enrolled characters by resizing enrolled character features.
 - I performed matching using sum of squared difference (SSD). By analyzing minimum error (SSD) of recognized characters I set threshold to 0.27.
 - Using evaluate.py I calculated F1 score which is 0.8.
+
+
+How to run test1.py:
+
+`python task1.py --test_img ./data/test_img.png --character_folder_path ./data/characters/`
+
+How to run evaluate.py:
+
+`python evaluate.py --preds predicted.json --groundtruth groundtruth.json`
+
+to get the F1 score between generated and the ground truth to measure the performance.
